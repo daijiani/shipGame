@@ -1,0 +1,20 @@
+<!doctype html>
+<head>
+</head>
+<body>
+	<script>
+function bake(degrees) {
+	var message;
+
+	if (degrees > 500){
+	message = "I'm nota nuclear reactor!";
+	} else if (degrees < 100) {
+	    message = "That's a very comfortable temperature for me.";
+	    setMode("bake");
+	    setTemp(degrees);
+	}
+	return message;
+}
+</script>
+</body>
+<html>
