@@ -7,10 +7,18 @@
     <title>Document</title>
     <script>
       function init() {
-        var obj = document.getElementById("title");
-
-        alert(obj.innerHTML);
-        obj.innerHTML = "GOODBYE WORLD!";
+        var h1Obj = document.getElementById("title");
+        picObj = document.getElementById("pic");
+        h1Obj.innerHTML = "GOODBYE WORLD!";
+        h1Obj.setAttrbute("class","tit");
+        picObj.setAttrbute("alt");
+      }
+      function changePicture(){
+        if (picObj.getAttribute("src")=="1.jpg"){
+          picObj.setAttribute("src","2.jpg");
+        }else {
+          picObj.setAttribute("src","1.jpg");
+        }
       }
 
       window.onload = init;
@@ -18,5 +26,7 @@
   </head>
   <body>
       <h1 id="title">hello world!</h1>
+      <img id="pic" src="1.jpg" alt= "沉睡魔咒图片">
+      <button onclick="changePicture()">点我换图</button>
   </body>
 </html>
